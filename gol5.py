@@ -60,17 +60,26 @@ speed=0.3
 width = 9
 height = 9
 distance = 10
-#padding of dispay from wall
-xpad = 90
-ypad = 300
 
+#padding of dispay from wall
+#from left wall
+xpad = 250
+#from top
+ypad = 350
+
+#size Of Background Picture
+bgWidth = 1510
+bgHeight = 1200
+
+#BAckground Picture file
+backGroundFile = "BG.jpg"
 #step counter
 steps = 1
 xcount = 0
 
 #start Pygame
 pygame.init()
-win = pygame.display.set_mode((1510,850))
+win = pygame.display.set_mode((bgWidth,bgHeight))
 pygame.display.set_caption("VisualiZer")
 #wallpaper
 #bg = pygame.image.load('bg1.jpg')
@@ -96,12 +105,13 @@ def Run():
 	global distance
 	global xpad
 	global ypad
+	global backGroundFile
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			pygame.quit()
 			quit()		
 			
-	bg = pygame.image.load('boobs.jpg')
+	bg = pygame.image.load(backGroundFile)
 	win.blit(bg, (0,0))		
 	#cleanup()
 	
