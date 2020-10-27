@@ -69,7 +69,7 @@ ypad = 350
 
 #size Of Background Picture
 bgWidth = 1510
-bgHeight = 1200
+bgHeight = 944
 
 #BAckground Picture file
 backGroundFile = "BG.jpg"
